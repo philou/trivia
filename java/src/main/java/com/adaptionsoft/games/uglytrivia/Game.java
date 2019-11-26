@@ -1,5 +1,7 @@
 package com.adaptionsoft.games.uglytrivia;
 
+import com.adaptionsoft.games.trivia.Player;
+
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -7,7 +9,7 @@ import java.util.LinkedList;
 public class Game {
 	private final PrintStream out;
 
-	ArrayList players = new ArrayList();
+	ArrayList<Player> players = new ArrayList<Player>();
     int[] places = new int[6];
     int[] purses  = new int[6];
     boolean[] inPenaltyBox  = new boolean[6];
@@ -42,7 +44,7 @@ public class Game {
 	public boolean add(String playerName) {
 		
 		
-	    players.add(playerName);
+	    players.add(new Player(playerName));
 	    places[howManyPlayers()] = 0;
 	    purses[howManyPlayers()] = 0;
 	    inPenaltyBox[howManyPlayers()] = false;
