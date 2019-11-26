@@ -15,4 +15,11 @@ public class PlayerTest {
     starts_at_place_0() {
         assertThat(new Player("Jim").place()).isEqualTo(0);
     }
+
+    @Test public void
+    can_move() {
+        Player jim = new Player("Jim");
+        jim.moveTo(4);
+        assertThat(jim.place()).isEqualTo(4);
+    }
 }

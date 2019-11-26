@@ -2,6 +2,7 @@ package com.adaptionsoft.games.trivia;
 
 public class Player {
     private final String name;
+    private int place = 0;
 
     public Player(String name) {
         this.name = name;
@@ -13,6 +14,10 @@ public class Player {
     }
 
     public int place() {
-        return 0;
+        return place;
+    }
+
+    public void moveTo(int newPlace) {
+        this.place = newPlace;
     }
 }
