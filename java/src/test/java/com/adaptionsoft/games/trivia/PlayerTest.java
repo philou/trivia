@@ -10,4 +10,9 @@ public class PlayerTest {
     public void create_a_new_player_with_a_name() {
         assertThat(new Player("Joe").toString()).isEqualTo("Joe");
     }
+
+    @Test public void
+    starts_at_place_0() {
+        assertThat(new Player("Jim").place()).isEqualTo(0);
+    }
 }
